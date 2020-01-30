@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<Tab xmlns="http://javafx.com/javafx"
+     xmlns:fx="http://javafx.com/fxml" fx:controller="ui.controllers.SearchController" fx:id="searchTab"
+     closable="false" styleClass="tab-main" text="Search">
+    <content>
+        <VBox alignment="TOP_LEFT">
+            <children>
+                <HBox alignment="CENTER"  prefHeight="100.0" spacing="20.0">
+                    <children>
+                        <JFXTextField  prefWidth="500" fx:id="searchTextField" labelFloat="true" promptText="Search">
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" top="20.0" />
+                            </VBox.margin>
+                        </JFXTextField>
+                    </children>
+                    <children>
+                        <JFXButton visible="true" onAction="#search" fx:id="btnRefresh" prefHeight="44.0"
+                                   prefWidth="151.0" text="Search"
+                                   styleClass="button">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                            <padding>
+                                <Insets/>
+                            </padding>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+            <children>
+                <TableView
+                        fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="500.0" prefWidth="1000.0"
+                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                        AnchorPane.topAnchor="30.0">
+                    <columns>
+                        <TableColumn fx:id="id" prefWidth="75.0" text="Result no."/>
+                        <TableColumn fx:id="name" prefWidth="75.0" text="Name"/>
+                        <TableColumn fx:id="price" prefWidth="75.0" text="Price"/>
+                        <TableColumn fx:id="owner" prefWidth="75.0" text="Owner"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </VBox>
+
+    </content>
+</Tab>
+

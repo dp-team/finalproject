@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<Tab xmlns="http://javafx.com/javafx"
+     xmlns:fx="http://javafx.com/fxml" fx:controller="ui.controllers.SuppliersController" fx:id="suppliersTab" onSelectionChanged="#reload"
+     closable="false" styleClass="tab-main" text="Suppliers">
+    <content>
+        <VBox alignment="TOP_LEFT">
+            <children>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                    <children>
+                        <JFXButton onAction="#addSupplier" fx:id="btnAddSupplier" prefHeight="44.0"
+                                   prefWidth="151.0" text="Add Supplier"
+                                   styleClass="button">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                            <padding>
+                                <Insets/>
+                            </padding>
+                        </JFXButton>
+                    </children>
+                    <children>
+                        <JFXButton onAction="#reload" visible="true" fx:id="btnRefresh" prefHeight="44.0"
+                                   prefWidth="151.0" text="Reload"
+                                   styleClass="button">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                            <padding>
+                                <Insets/>
+                            </padding>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+            <children>
+<JFXTreeView styleClass="myTree" fx:id="supplierTreeView" layoutX="0" layoutY="0">
+</JFXTreeView>
+
+            </children>
+        </VBox>
+
+    </content>
+</Tab>
+

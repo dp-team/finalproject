@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<Tab xmlns="http://javafx.com/javafx"
+     xmlns:fx="http://javafx.com/fxml" fx:controller="ui.controllers.ProductsController" fx:id="productsTab" onSelectionChanged="#loadData"
+     closable="false" styleClass="tab-main" text="Products">
+    <content>
+        <VBox alignment="TOP_LEFT">
+            <children>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                    <children>
+                        <JFXButton fx:id="btnAddProduct" prefHeight="44.0"
+                                   onAction="#addProduct"
+                                   prefWidth="151.0" text="Add Product"
+                                   styleClass="button">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                            <padding>
+                                <Insets/>
+                            </padding>
+                        </JFXButton>
+                    </children>
+                    <children>
+                        <JFXButton visible="true" fx:id="btnRefresh" prefHeight="44.0"
+                                   onAction="#loadData"
+                                   prefWidth="151.0" text="Reload List"
+                                   styleClass="button">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                            <padding>
+                                <Insets/>
+                            </padding>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+            <children>
+                <TableView
+                        fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="500.0" prefWidth="1000.0"
+                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                        AnchorPane.topAnchor="30.0">
+                    <columns>
+                        <TableColumn fx:id="id" prefWidth="75.0" text="ID"/>
+                        <TableColumn fx:id="name" prefWidth="75.0" text="Name"/>
+                        <TableColumn fx:id="price" prefWidth="75.0" text="Price"/>
+                        <TableColumn fx:id="owner" prefWidth="75.0" text="Owner"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </VBox>
+
+    </content>
+</Tab>
+

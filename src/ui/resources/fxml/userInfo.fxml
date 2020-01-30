@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox styleClass="tab" xmlns="http://javafx.com/javafx" prefWidth="250" onMouseEntered="#updateInfo"
+      xmlns:fx="http://javafx.com/fxml" alignment="TOP_CENTER" spacing="20.0" fx:controller="ui.controllers.UserInfoController">
+    <VBox.margin>
+        <Insets/>
+    </VBox.margin>
+<children>
+    <ImageView visible="true" fx:id="heroImageDark" fitHeight="150.0" fitWidth="150.0"  pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image   url="@/ui/resources/style/add1.png" />
+        </image>
+        <VBox.margin>
+            <Insets top="10.0" left="10" right="10" />
+        </VBox.margin>
+    </ImageView>
+    <VBox fx:id="userInfo" >
+    <HBox fx:id="usernameLabel" alignment="CENTER_LEFT"
+    >
+        <VBox.margin>
+            <Insets top="10.0" left="20" right="20"/>
+        </VBox.margin>
+        <Text
+                fontSmoothingType="LCD" layoutX="87.0"
+                strokeType="OUTSIDE" strokeWidth="0.0"
+                styleClass="label-text"
+                text="Username: ">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Text>
+        <Text fx:id="username"
+              fontSmoothingType="LCD" layoutX="87.0"
+              layoutY="228.0"
+              strokeType="OUTSIDE" strokeWidth="0.0"
+              styleClass="main-text"
+             >
+        </Text>
+
+    </HBox>
+    <HBox fx:id="totalProductsLabel" alignment="CENTER_LEFT"
+    >
+        <VBox.margin>
+            <Insets top="10.0" left="20" right="20"/>
+        </VBox.margin>
+        <Text
+                fontSmoothingType="LCD" layoutX="87.0"
+                strokeType="OUTSIDE" strokeWidth="0.0"
+                styleClass="label-text"
+                text="Total Products: ">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Text>
+        <Text fx:id="totalProducts"
+              fontSmoothingType="LCD" layoutX="87.0"
+              layoutY="228.0"
+              strokeType="OUTSIDE" strokeWidth="0.0"
+              styleClass="main-text"
+              text="0">
+        </Text>
+
+    </HBox>
+    <HBox fx:id="totalDistributorsLabel" alignment="CENTER_LEFT"
+    >
+        <VBox.margin>
+            <Insets top="10.0" left="20" right="20" />
+        </VBox.margin>
+        <Text
+                fontSmoothingType="LCD" layoutX="87.0"
+                strokeType="OUTSIDE" strokeWidth="0.0"
+                styleClass="label-text"
+                text="Distributors: "/>
+        <Text fx:id="totalDistributors"
+              fontSmoothingType="LCD" layoutX="87.0"
+              layoutY="228.0"
+              strokeType="OUTSIDE" strokeWidth="0.0"
+              styleClass="main-text"
+              text="0"/>
+    </HBox>
+    </VBox>
+    <HBox fx:id="accountControl" alignment="CENTER"
+    >
+        <VBox.margin>
+            <Insets top="10.0" left="20" right="20" />
+        </VBox.margin>
+        <JFXButton fx:id="loginBtn" onAction="#login" prefWidth="100" prefHeight="44.0"
+                    text="Login">
+            <HBox.margin>
+                <Insets/>
+            </HBox.margin>
+        </JFXButton>
+        <JFXButton visible="false" onAction="#logout" fx:id="logoutBtn" prefWidth="100" prefHeight="44.0"
+                   text="Logout">
+            <HBox.margin>
+                <Insets/>
+            </HBox.margin>
+        </JFXButton>
+    </HBox>
+</children>
+</VBox>
